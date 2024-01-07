@@ -1,0 +1,145 @@
+:root {
+    /*primary colors*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*neutral colors for paragraphs*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /*neutral colors for background, headings, buttons*/
+    --very-light-gray: hsl(0, 0%, 95%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 64%;
+    height: 42rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 2rem;
+}
+
+/*----------------cards--------------------*/
+.card {
+    width: calc(100% / 3);
+    padding: 4rem;
+}
+
+.card:nth-child(1) {
+    background-color: var(--bright-orange);
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.card:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.card img,
+.card h2 {
+    margin-bottom: 2.4rem;
+}
+
+.card h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 3.4rem;
+    color: var(--very-light-gray);
+}
+
+.card p {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.8;
+    color: var(--transparent-white);
+    margin-bottom: 6rem;
+}
+
+/*----------------buttons--------------------*/
+.card button {
+    background-color: var(--very-light-gray);
+    border: none;
+    padding: 1.2rem 2.6rem;
+    border-radius: 30px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card:nth-child(1) button {
+    border: 2px solid var(--bright-orange);
+    color: var(--bright-orange);
+}
+
+.card:nth-child(2) button {
+    color: var(--dark-cyan);
+    border: 2px solid var(--dark-cyan);
+}
+
+.card:nth-child(3) button {
+    color: var(--very-dark-cyan);
+    border: 2px solid var(--very-dark-cyan);
+}
+
+/*----------hover states for buttons-----------*/
+.card button:hover {
+    cursor: pointer;
+    border: 2px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+    padding: 1.2rem 2.5rem;
+}
+
+.card:nth-child(1) button:hover {
+    background-color: var(--bright-orange);
+}
+
+.card:nth-child(2) button:hover {
+    background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) button:hover {
+    background-color: var(--very-dark-cyan);
+}
+
+/*----------------footer------------------*/
+.attribution { 
+    font-size: 1.1rem; 
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*----------------media queries-----------------*/
+@media (max-size: 600px) {
+    .card:nth-child(1) {
+        background-color: red;
+    }
+}
